@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:form_validator/form_validator.dart';
 import 'package:tiny_forms/src/extensions/text_form_field_extension.dart';
 import 'package:tiny_forms/src/form_client.dart';
 
@@ -26,7 +25,6 @@ class ExampleApp extends StatelessWidget {
               // Validation using the form_validator package
               TextFormField(
                 controller: TextEditingController(),
-                validator: ValidationBuilder().minLength(5).build(),
               ).register(name: 'username'),
               ElevatedButton(
                 onPressed: formClient.handleSubmit((data) {
