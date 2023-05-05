@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'bloc/form_bloc.dart';
+import 'package:tiny_forms/src/bloc/form_bloc.dart';
 
 /// TinyForms is a minimalistic Flutter package for building simple
 /// and lightweight forms with easy customization and validation.
@@ -11,6 +10,8 @@ class TinyFormClient {
 
   /// The [TinyFormBloc] to use for the form.
   final bloc = TinyFormBloc();
+
+  /// The [GlobalKey] to use for the form.
   final form = GlobalKey<FormState>();
 
   /// The [TinyFormBloc] to use for the form.
