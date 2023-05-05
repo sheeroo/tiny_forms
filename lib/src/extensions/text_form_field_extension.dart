@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tiny_forms/src/bloc/form_bloc.dart';
 
 /// The extension of the [TextFormField].
 extension TextFormFiledExtension on TextFormField {
   /// Register the [TextFormField].
   Widget register({required String name}) {
-    return _RegisterField(child: this);
+    return _RegisterField(name: name, child: this);
   }
 }
 
 class _RegisterField extends StatefulWidget {
   const _RegisterField({
+    required this.name,
     required this.child,
   });
 
+  final String name;
   final TextFormField child;
 
   @override
@@ -26,9 +30,14 @@ class _RegisterFieldState extends State<_RegisterField> {
     final controller = widget.child.controller;
 
     assert(controller != null, 'The controller must not be null.');
-
     controller!.addListener(() {
-      debugPrint(controller.text);
+      context.read<TinyFormBloc>().add(
+            FormUpdate(
+              data: {
+                widget.name: controller.text,
+              },
+            ),
+          );
     });
   }
 
