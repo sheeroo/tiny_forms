@@ -21,3 +21,7 @@
 # 0.1.1+9
 
 - bug: Fixed lib exports 🎉
+
+# 0.2.0+10
+
+- feat: Updated register extension to support textfield 🎉
