@@ -1,6 +1,6 @@
 name: "tiny_forms"
 description: "TinyForms is a minimalistic Flutter package for building simple and lightweight forms with easy customization and validation."
-version: "0.1.1+8"
+version: "0.1.1+9"
 homepage: "https://github.com/sheeroo/tiny_forms"
 environment: 
   sdk: ">=2.18.0 <4.0.0"
