@@ -17,3 +17,7 @@
 # 0.1.1+8
 
 - enhance: FormClient const constructor 🎉
+
+# 0.1.1+9
+
+- bug: Fixed lib exports 🎉
