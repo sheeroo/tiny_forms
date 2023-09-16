@@ -4,15 +4,18 @@ import 'package:tiny_forms/src/bloc/form_bloc.dart';
 
 /// TinyForms is a minimalistic Flutter package for building simple
 /// and lightweight forms with easy customization and validation.
+final bloc = TinyFormBloc();
+// ignore: public_member_api_docs
+final form = GlobalKey<FormState>();
+
+// ignore: public_member_api_docs
 class TinyFormClient {
   /// The key to use for the form.
-  TinyFormClient();
+  const TinyFormClient();
 
   /// The [TinyFormBloc] to use for the form.
-  final bloc = TinyFormBloc();
 
   /// The [GlobalKey] to use for the form.
-  final form = GlobalKey<FormState>();
 
   /// The [TinyFormBloc] to use for the form.
   Widget formProvider({required Widget child}) {
